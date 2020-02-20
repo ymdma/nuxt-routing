@@ -14,7 +14,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Permanent+Marker&display=swap'},
+      // { rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Permanent+Marker&display=swap'},
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lacquer|Open+Sans&display=swap'}
     ]
   },
