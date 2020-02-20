@@ -48,7 +48,7 @@
             </router-link>
           </ul>
 
-          <h3>admins</h3>
+        <h3>admins</h3>
           <ul>
             <h4>Index</h4>
             <nuxt-link to="/admins">
@@ -66,6 +66,13 @@
             </router-link>
             <router-link :to="{name: 'admins-others'}">
               <li>Admins/Others[name]</li>
+            </router-link>
+          </ul>
+
+        <h3>動的なルーティングへのリンク（固定値）</h3>
+          <ul>
+            <router-link :to="{path: '/users/1'}">
+            <li>user id: 1</li>
             </router-link>
           </ul>
       </div>
