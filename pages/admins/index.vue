@@ -1,7 +1,6 @@
 <template>
   <section class="container">
     This is AdminsPage.
-
   </section>
 </template>
 
