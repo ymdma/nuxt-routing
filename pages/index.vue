@@ -6,28 +6,21 @@
         nuxt-routing
       </h1>
       <h2 class="subtitle">
-        My mind-blowing Nuxt.js project
+        ルーティング等についてのテスト
       </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+
 
       <hr>
 
       <div class="test-links">
+        <h3>カスタムレイアウト</h3>
+          <ul>
+            <!-- <h4>Blog</h4> -->
+            <router-link to="/posts">
+              <li>Posts</li>
+            </router-link>
+
+          </ul>
         <h3>Users</h3>
           <ul>
             <h4>Index</h4>
