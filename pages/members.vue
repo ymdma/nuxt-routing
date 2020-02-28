@@ -1,7 +1,7 @@
 <template>
-  <section class="cont">
+  <section class="container">
     <Nav />
-    <div class="aaa">
+    <div class="prof-shadow">
       <!-- ストア呼び出すときは$、最初から書かんと！ -->
       <template v-if="$store.state.prof.showData.length !== 0">
         <Profile />
@@ -14,31 +14,35 @@
 
 <script>
 import Nav from '~/components/nav.vue'
+// import Comp2 from '~/components/comp2.vue'
 import Profile from '~/components/profile.vue'
 
+// ここでグローバルに登録
 export default {
+  layout:
+    'lay2',
   components:{
     Nav,
-    Profile,
+    // Comp2,
+    Profile
   }
 }
-
-
-
 </script>
 
 <style scoped>
-.aaa{
+.prof-shadow{
+  margin-right: 180px;
   width: 300px;
 }
-.cont{
-  /* margin: 40px 0 0 40px; */
-  padding: 20px 0;
+.container{
+  margin: 80px 0 0 0;
+  padding: 20px 0 0 0;
   width: 100%;
   height: 100vh;
   background: #ddd;
   display: flex;
   justify-content: space-around;
 }
+
 </style>
 

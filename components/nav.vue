@@ -1,26 +1,36 @@
 <template>
   <div class="nav">
-<ul>
-      <li v-for="(member,index) in members" :key="index" @click="open(member)">  {{ member.name }}</li>
-
+    <ul>
+      <li>
+        メンバー紹介！
+      </li>
+      <!-- v-forのindexは"eachWithIndex"のノリのindex。 -->
+      <!-- v-forには :keyが常に必要 -->
+      <!-- @clickの引数はv-forのmember -->
+      <li v-for="(member,index) in members" :key="index" @click="open(member)">
+        {{ member.name }}
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
 export default{
-    data(){
+  // 呼び出し元にデータを書く
+  data(){
     return{
       members:[
         {name:"Yamada",year:"25",hobby:"筋トレ"},
         {name:"Tanaka",year:"30",hobby:"特になし"},
-        {name:"中田",year:"45",hobby:"プラモ"}
+        {name:"Nakata",year:"45",hobby:"プラモ"}
         ]
     }
   },
   methods:{
     open(member){
       // console.log(member.year)
+      // メソッドの中では "this." !!
+      // templateに書いてもいいはず
       this.$store.dispatch('prof/open', member)
     }
   }
@@ -31,10 +41,11 @@ export default{
 
 <style>
 .nav{
-  width: 300px;
-  height: 300px;
-  border: solid #000 2px;
+  width: fit-content;
+  height: fit-content;
+  margin: 20px 0 0 0;
   background: #ddd;
+  border: solid #333 2px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,12 +53,27 @@ export default{
   text-align: center;
 }
 .nav ul{
-  width: 300px;
+  width: fit-content;
+  height: 200px;
+  padding: 0;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* align-items: center; */
+  /* text-align: center; */
   list-style: none;
 }
 .nav li{
-  height: 40px;
-  border: solid #000 1px;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  border: solid #333 1px;
+  cursor: pointer;
+}
+.nav li:first-child{
+  background: rgb(140, 187, 248);
+  font-weight: 600;
+  cursor: default
 }
 
 </style>

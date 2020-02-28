@@ -26,10 +26,5 @@ export default {
   background: #ffd;
 }
 
-.side{
-  position: relative;
-  top: 50vh;
-  left: 70%;
-  width: fit-content;
-}
+
 </style>

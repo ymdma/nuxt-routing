@@ -3,7 +3,7 @@
     <header>
       <div class="header-wrap">
         <h1>
-          Blog
+          TITLE
         </h1>
         <div class="h-nav">
           ここにナビゲーション
@@ -11,7 +11,6 @@
       </div>
     </header>
     <nuxt />
-    
   </div>
 </template>
 
@@ -26,7 +25,7 @@ header{
   padding: 0 60px;
   position: fixed;
   top: 0;
-  background-color: #ddd;
+  background-color: #aaa;
 }
 
 .header-wrap{

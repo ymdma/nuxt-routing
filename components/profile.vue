@@ -8,33 +8,32 @@
           名前: {{ currentData.name }}
         </li>
         <li>
-          年齢 {{ currentData.year }}
+          年齢: {{ currentData.year }}
         </li>
         <li>
           趣味: {{ currentData.hobby }}
         </li>
       </ul>
     </div>
-
 </template>
 
 <script>
-export default{
-  computed:{
+export default {
+  computed: {
     currentData(){
       return this.$store.state.prof.showData
     }
   }
 }
-
 </script>
 
 <style>
 .profile{
-  width: 300px;
-  height: 200px;
-  border: solid #000 2px;
+  width: fit-content;
+  height: fit-content;
+  margin: 20px 0 0 0;
   background: #ddd;
+  border: solid #333 2px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,14 +41,22 @@ export default{
   text-align: center;
 }
 .profile ul{
-  width: 300px;
-    list-style: none;
+  width: fit-content;
+  height: 210px;
+  padding: 0;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* align-items: center; */
+  /* text-align: center; */
+  list-style: none;
 }
 .profile li{
-  height: 40px;
-  border: solid #000 1px;
-  
+  width: 296px;
+  height: 70px;
+  line-height: 70px;
+  background: #fff;
+  font-size: 24px;
+  border: solid #333 1px;
 }
-
-
 </style>
